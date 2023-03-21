@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --ff-heading: 'Staatliches', sans-serif;
+  --ff-texting: 'Palanquin', sans-serif;
+
+  --bg-header: #8E9AAF;
+  --bg-body: #EFF1FF;
+  --bg-h1: #CBC0D3;
+
+  --fc-primary: #FFFFFF;
+  --fc-secondary: #23053A;
+  --fc-card: #4A4E69;
+
+  --fs-header: 3.5rem;
+  --fs-card: 2rem;
+
+  --lh-body: 1.5rem;
+  --lh-header: 3.4rem;
+
+  font-size: 62.5%; /* 10px */
+}
+
+body {
+  background-color: var(--bg-body);
+
+  color: var(--fc-secondary);
+
+  font-family: var(--ff-texting);
+  line-height: var(--lh-body);
+}
+
+header {
+  background-color: var(--bg-header);
+
+  text-align: center;
+
+  height: 27.9rem;
+}
+
+header img {
+  margin-bottom: 3.2rem;
+  margin-top: 3.2rem;
+}
+
+header h1 {
+  background-color: var(--bg-h1);
+
+  color: var(--fc-primary);
+
+  text-transform: uppercase;
+
+  font-family: var(--ff-heading);
+  font-size: var(--fs-header);
+  line-height: var(--lh-header);
+  letter-spacing: 0.1em;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+
+  padding-bottom: 43px;
+
+  height: 4.9rem;
+
+  text-align: center;
+}
+
+.card {
+  color: var(--fc-card);
+
+  text-transform: uppercase;
+
+  position: relative;
+
+  margin-bottom: 3.2rem;
+}
+
+.card h3 {
+  position: absolute;
+  bottom: 20rem;
+  left: 19.2rem;
+}
+
+.card h4 {
+  position: absolute;
+  bottom: 40rem;
+  left: 19.2rem;
+}
+
+.card h3,h4 span {
+  border-radius: 2rem;
+  background-color: #FEEAFA;
+  font-size: var(--fs-card);
+  color: var(--fc-card);
+  padding: 1rem 2.3rem;
+  font-family: var(--ff-heading);
+  display: inline-flex;
+  align-items: center;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+
+  animation: topdown 700ms 350ms;
+}
+
+.card img {
+  animation: downtop 700ms 350ms backwards;
+}
+
+.page {
+  max-width: 32rem;
+
+  margin: 0 auto;
+}
+
+
+main img {
+  width: 100%;
+  height: auto;
+}
+
+main {
+  text-align: center;
+}
+
+p {
+  margin-top: 2rem;
+  margin-bottom: 4.2rem;
+
+  max-width: 30.5rem;
+  max-height: 7.5rem;
+
+  font-family: 'Palanquin', sans-serif;
+  font-size: 1.2rem;
+}
+
+@keyframes topdown {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes downtop {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
